@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>convoluteimage.js demo</title>
+</head>
+
+<body>
+    <button onclick="reload()">Convolute</button>
+    <br/>
+    <img src="sample.jpg" alt="">
+    <img src="sample.jpg" id='toConvolute' alt="">
+    <script>
+        function reload() {
+            var img = document.querySelector('#toConvolute');
+            var w = 200;
+            var h = 120;
+            convolute.blur(img, 15, { offsetX: (img.width - w) / 2, offsetY: (img.height - h) / 2, width: w, height: h });
+        }
+    </script>
+    <script src="convolute.js"></script>
+
+</body>
+
+</html>
